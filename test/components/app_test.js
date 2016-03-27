@@ -1,14 +1,18 @@
-import { renderComponent , expect } from '../test_helper';
+import { renderComponent, expect } from '../test_helper';
 import App from '../../src/components/app';
 
-describe('App' , () => {
+describe('App', () => {
   let component;
 
   beforeEach(() => {
-    component = renderComponent(App);
+      component = renderComponent(App);
   });
 
-  it('renders something', () => {
-    expect(component).to.exist;
+  it('shows a coment box', () => {
+    expect(component.find('.comment-box')).to.exist;
+  });
+
+  it('shows a coment list', () => {
+    expect(component.find('.comment-list')).to.exist;
   });
 });
